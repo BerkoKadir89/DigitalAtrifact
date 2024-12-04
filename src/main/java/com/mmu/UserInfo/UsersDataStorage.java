@@ -1,7 +1,5 @@
 package com.mmu.UserInfo;
 
-
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -11,7 +9,6 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.HashMap;
 import java.util.Map;
-
 
 public class UsersDataStorage {
 
@@ -25,11 +22,9 @@ public class UsersDataStorage {
 
     }
 
- 
-    public void updateUser(String username, User updatedUser){
-         users.replace(username, updatedUser); 
+    public void updateUser(String username, User updatedUser) {
+        users.replace(username, updatedUser);
     }
-
 
     // Saving the user infomation
     public void saveUser(String file) {
@@ -108,7 +103,7 @@ public class UsersDataStorage {
 
     }
 
-    public void showAllUsers (){
+    public void showAllUsers() {
         for (Map.Entry<String, User> item : users.entrySet()) {
             System.out.println(item.toString()); // prints out list of all users
         }
@@ -160,18 +155,15 @@ public class UsersDataStorage {
         }
     }
 
-
     // this will check if the user exists for the admin to make changes
-    public boolean userChecker(String username){
+    public boolean userChecker(String username) {
 
-        if(users.containsKey(username)){
+        if (users.containsKey(username)) {
             return true;
-        }
-        else{
+        } else {
             return false;
         }
     }
-  
 
     public int getCount() {
         return count;
@@ -188,11 +180,5 @@ public class UsersDataStorage {
     public void setUser(Map<String, User> users) {
         this.users = users;
     }
-
-
-    
-   
-
-    
 
 }
