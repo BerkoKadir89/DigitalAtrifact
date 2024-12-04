@@ -10,29 +10,28 @@ public class Logic {
     private static final String binFile = "test.bin";
     private Scanner scan = new Scanner(System.in);
     private UsersDataStorage userSystem;
-   
-    public Logic(UsersDataStorage userSystem){
+
+    public Logic(UsersDataStorage userSystem) {
         this.userSystem = userSystem;
 
     }
 
-
-    public void getBanner(){
+    public void getBanner() {
         System.out.println(
-            "                  ___       _                                 ___               _      _        \r\n" + //
-                    "/'\\_/`\\          (  _`\\  _ ( )_                              (  _`\\            ( )    ( )       \r\n"
-                    + //
-                    "|     | _   _    | (_(_)(_)| ,_)  ___     __    ___   ___    | (_) ) _   _    _| |   _| | _   _ \r\n"
-                    + //
-                    "| (_) |( ) ( )   |  _)  | || |  /' _ `\\ /'__`\\/',__)/',__)   |  _ <'( ) ( ) /'_` | /'_` |( ) ( )\r\n"
-                    + //
-                    "| | | || (_) |   | |    | || |_ | ( ) |(  ___/\\__, \\\\__, \\   | (_) )| (_) |( (_| |( (_| || (_) |\r\n"
-                    + //
-                    "(_) (_)`\\__, |   (_)    (_)`\\__)(_) (_)`\\____)(____/(____/   (____/'`\\___/'`\\__,_)`\\__,_)`\\__, |\r\n"
-                    + //
-                    "       ( )_| |                                                                           ( )_| |\r\n"
-                    + //
-                    "       `\\___/'                                                                           `\\___/'");
+                "                  ___       _                                 ___               _      _        \r\n" + //
+                        "/'\\_/`\\          (  _`\\  _ ( )_                              (  _`\\            ( )    ( )       \r\n"
+                        + //
+                        "|     | _   _    | (_(_)(_)| ,_)  ___     __    ___   ___    | (_) ) _   _    _| |   _| | _   _ \r\n"
+                        + //
+                        "| (_) |( ) ( )   |  _)  | || |  /' _ `\\ /'__`\\/',__)/',__)   |  _ <'( ) ( ) /'_` | /'_` |( ) ( )\r\n"
+                        + //
+                        "| | | || (_) |   | |    | || |_ | ( ) |(  ___/\\__, \\\\__, \\   | (_) )| (_) |( (_| |( (_| || (_) |\r\n"
+                        + //
+                        "(_) (_)`\\__, |   (_)    (_)`\\__)(_) (_)`\\____)(____/(____/   (____/'`\\___/'`\\__,_)`\\__,_)`\\__, |\r\n"
+                        + //
+                        "       ( )_| |                                                                           ( )_| |\r\n"
+                        + //
+                        "       `\\___/'                                                                           `\\___/'");
     }
 
     public void choosingWhatUserToDelete() {
@@ -142,8 +141,6 @@ public class Logic {
 
     }
 
-   
-
     public void usersSignUp() {
         System.out.println("Please enter your Name: ");
         String name = scan.nextLine();
@@ -165,44 +162,44 @@ public class Logic {
         userSystem.saveUser(binFile); // saves informatiob is the file "binFile"
     }
 
-    public void weightTrackerMenu(User user, String username){
+    public void weightTrackerMenu(User user, String username) {
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
-                            System.out.println("[1] would you like to log your weight ");
-                            System.out.println("[2] Show all weights recorded ");
-                            System.out.println("[3] Check Analyse ");
-                            System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
-                            System.out.print("Please enter an option: ");
-                            int weightMenuOption = scan.nextInt();
-                            switch (weightMenuOption) {
-                                case 1 -> {
-                                    System.out.println("Please enter your weight in kg: ");
-                                    double newWeight = scan.nextDouble();
-                                    user.addlog(newWeight); // adds the new weight to a hashmap
-                                    userSystem.updateUser(username, user);
-                                    userSystem.saveUser(binFile);
-                                    System.out.println("weight logged");
+        System.out.println("[1] would you like to log your weight ");
+        System.out.println("[2] Show all weights recorded ");
+        System.out.println("[3] Check Analyse ");
+        System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+        System.out.print("Please enter an option: ");
+        int weightMenuOption = scan.nextInt();
+        switch (weightMenuOption) {
+            case 1 -> {
+                System.out.println("Please enter your weight in kg: ");
+                double newWeight = scan.nextDouble();
+                user.addlog(newWeight); // adds the new weight to a hashmap
+                userSystem.updateUser(username, user);
+                userSystem.saveUser(binFile);
+                System.out.println("weight logged");
 
-                                }
-                                case 2 -> {
-                                    System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
-                                    System.out.println(user.getWeightlog().entrySet()); // gets all the previous weights
-                                    System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+            }
+            case 2 -> {
+                System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+                System.out.println(user.getWeightlog().entrySet()); // gets all the previous weights
+                System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
 
-                                }
+            }
 
-                                case 3 -> {
+            case 3 -> {
 
-                                    LoggedInMenu loggedin = new LoggedInMenu(user);
-                                    System.out.println("since you started, your weight change is "
-                                            + loggedin.weightAnalysis() + " kg");
+                LoggedInMenu loggedin = new LoggedInMenu(user);
+                System.out.println("since you started, your weight change is "
+                        + loggedin.weightAnalysis() + " kg");
 
-                                }
+            }
 
-                                default -> {
-                                    System.out.println("enter a valid value: ");
-                                }
+            default -> {
+                System.out.println("enter a valid value: ");
+            }
 
-                            }
+        }
     }
 
 }

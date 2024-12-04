@@ -109,7 +109,6 @@ public class LoggedInMenuTests {
         assertEquals(expectedBmi, logged.bmiCal(), 0.01);
     }
 
-
     @Test
     public void weightAnalysisTest() {
         User user = new User("Berko", "BerkoKadir", "password", 175, 70, 20, "male");
@@ -121,6 +120,7 @@ public class LoggedInMenuTests {
         assertEquals(expectedChange, logged.weightAnalysis(), 0.01);
 
     }
+
     @Test
     public void weightAnalysisNegatveTest() {
         User user = new User("Berko", "BerkoKadir", "password", 175, 70, 20, "male");
@@ -132,6 +132,7 @@ public class LoggedInMenuTests {
         assertEquals(expectedChange, logged.weightAnalysis(), 0.01);
 
     }
+
     @Test
     public void weightAnalysisNoChangeTest() {
         User user = new User("Berko", "BerkoKadir", "password", 175, 70, 20, "male");
@@ -142,9 +143,5 @@ public class LoggedInMenuTests {
         assertEquals(expectedChange, logged.weightAnalysis(), 0.01);
 
     }
-   
-    
+
 }
-
-   
-

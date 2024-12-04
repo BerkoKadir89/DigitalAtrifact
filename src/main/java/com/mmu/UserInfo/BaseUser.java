@@ -7,7 +7,7 @@ public class BaseUser implements Serializable {
     private String username;
     private String password;
 
-    //This is the admins details
+    // This is the admins details
     public static final BaseUser adminUser = new BaseUser("Admin", "admin", "root");
 
     public BaseUser(String name, String username, String password) {
@@ -16,8 +16,7 @@ public class BaseUser implements Serializable {
         this.password = password;
     }
 
-
-    //this checks if the password and username of the Admin is correct
+    // this checks if the password and username of the Admin is correct
     public static boolean isMatch(String password, String username) {
         if (password.equals("root") && username.equals("admin")) {
             return true;
@@ -25,9 +24,6 @@ public class BaseUser implements Serializable {
             return false;
         }
     }
-
-
-   
 
     public String getName() {
         return name;
@@ -53,5 +49,3 @@ public class BaseUser implements Serializable {
         this.password = password;
     }
 }
-
- 

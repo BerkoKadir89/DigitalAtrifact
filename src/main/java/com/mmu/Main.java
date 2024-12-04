@@ -13,7 +13,7 @@ public class Main {
         UsersDataStorage userSystem = new UsersDataStorage();
         Logic logic = new Logic(userSystem);
         // This is just for the banner of Starting screen
-        logic.getBanner(); //loads banners loading page
+        logic.getBanner(); // loads banners loading page
         userSystem.loadUser(binFile); // This loads the users informatiom on text.bin
         System.out.println("");
         System.out.println("      Welcome to MyFitnessBuddy!");
@@ -50,7 +50,7 @@ public class Main {
                             }
 
                             case 2 -> {
-                                logic.choosingWhatUserToDelete(); // asks user want to delete then deletes 
+                                logic.choosingWhatUserToDelete(); // asks user want to delete then deletes
                             }
 
                             case 3 -> {
@@ -58,7 +58,7 @@ public class Main {
 
                             }
                             case 4 -> {
-                                return; //Ends the code
+                                return; // Ends the code
                             }
 
                             default -> {
@@ -88,7 +88,7 @@ public class Main {
                         LoggedInMenu obj = new LoggedInMenu(user);
                         // option 1
                         if (loggedinOption == 1) {
-                            logic.bulkingOrCutting(user); //gives daily calorie a user should have to bulk or cut
+                            logic.bulkingOrCutting(user); // gives daily calorie a user should have to bulk or cut
                         }
 
                         else if (loggedinOption == 2) {
@@ -100,7 +100,7 @@ public class Main {
                         }
 
                         else if (loggedinOption == 4) {
-                            logic.weightTrackerMenu(user, username); //used to log,show and get analysis of weight
+                            logic.weightTrackerMenu(user, username); // used to log,show and get analysis of weight
                         }
 
                         else if (loggedinOption == 5) {

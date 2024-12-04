@@ -8,15 +8,13 @@ import org.junit.Test;
 
 import com.mmu.UserInfo.User;
 
-
 public class UserTests {
-
 
     @Test
     public void AddLogTest() {
         User user = new User("berko", "Berko", "Diako", 190, 46, 20, "male");
         user.addlog(72.0);
-        assertEquals(72.0, user.getWeight(),0.01);
+        assertEquals(72.0, user.getWeight(), 0.01);
         assertEquals(1, user.getWeightlog().size());
     }
 
@@ -25,8 +23,8 @@ public class UserTests {
         User user = new User("berko", "Berko", "Diako", 190, 46, 20, "male");
         user.addlog(72.0);
         user.addlog(73.0);
-        assertEquals(73.0, user.getWeight(),0.01);
-        assertEquals(72.0, (double) user.getWeightlog().get(0),0.01);
+        assertEquals(73.0, user.getWeight(), 0.01);
+        assertEquals(72.0, (double) user.getWeightlog().get(0), 0.01);
         assertEquals(2, user.getWeightlog().size());
     }
 
@@ -34,7 +32,7 @@ public class UserTests {
     public void testAddLogWithZeroWeight() {
         User user = new User("berko", "Berko", "Diako", 190, 46, 20, "male");
         user.addlog(0.0);
-        assertEquals(0.0, user.getWeight(),0.01);
+        assertEquals(0.0, user.getWeight(), 0.01);
         assertEquals(1, user.getWeightlog().size());
     }
 
@@ -67,8 +65,5 @@ public class UserTests {
     public void testIsMatchEmptyUsername() {
         assertFalse(User.isMatch("root", ""));
     }
-
-  
-
 
 }

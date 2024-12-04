@@ -1,9 +1,8 @@
 package com.mmu.UserInfo;
 
-
 import java.util.HashMap;
 
-public class User extends BaseUser  {
+public class User extends BaseUser {
     private double height;
     private double weight; // current weight
     private int age;
@@ -23,7 +22,7 @@ public class User extends BaseUser  {
 
     }
 
-    //putting the new weight in a hashmap with a counter for each new weight
+    // putting the new weight in a hashmap with a counter for each new weight
     public void addlog(Double weights) {
 
         weightlog.put(counter, weights);

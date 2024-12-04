@@ -1,6 +1,5 @@
 package com.mmu;
 
-
 import com.mmu.UserInfo.User;
 
 public class LoggedInMenu {
@@ -86,18 +85,11 @@ public class LoggedInMenu {
 
     }
 
+    public double weightAnalysis() {
 
-    public double weightAnalysis(){
-
-        double weightChange = user.getWeightlog().get(user.getWeightlog().size()-1)- user.getWeightlog().get(0);
+        double weightChange = user.getWeightlog().get(user.getWeightlog().size() - 1) - user.getWeightlog().get(0);
         return weightChange;
 
     }
 
-    
-    
-
-
-   
 }
-
