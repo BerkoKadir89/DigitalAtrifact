@@ -119,7 +119,8 @@ public class Logic {
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
         System.out.print("Please enter an option: ");
         int activityLevel = scan.nextInt();
-        if (bulkOrCut.toLowerCase().trim().equals("bulking")) {
+        String bulkOrCutString = bulkOrCut.toLowerCase().trim();
+        if (bulkOrCutString.equals("bulking")) {
             System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
             System.out.println(
                     "Your Daily calorie intake is: " + (obj.dailyCalorieCal(activityLevel) + 200)); // adds
@@ -128,7 +129,7 @@ public class Logic {
                                                                                                     // maintence
                                                                                                     // calories
             System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
-        } else if (bulkOrCut.toLowerCase().trim().equals("cutting")) {
+        } else if (bulkOrCutString.equals("cutting")) {
             System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
             System.out.println(
                     "Your Daily calorie intake is: " + (obj.dailyCalorieCal(activityLevel) - 200));// minus
