@@ -10,6 +10,7 @@ public class LoggedInMenu {
         this.user = user;
     }
 
+    // calculates the daily calories
     public double dailyCalorieCal(int activityLevel) {
 
         if (user.getGender().toLowerCase().trim().equals("male")) {
@@ -66,6 +67,7 @@ public class LoggedInMenu {
             { "Bicep Curls", "Hammer Curls", "Tricep Extention", "Tricep Pulldowns", "Neck Curls" }, // Day 4
     };
 
+    // shows the workout
     public void workoutPlanString() {
         for (int i = 1; i < workout.length; i++) {
 
@@ -80,11 +82,13 @@ public class LoggedInMenu {
         }
     }
 
+    // caluclates the BMI
     public double bmiCal() {
         return user.getWeight() / Math.pow(user.getHeight() / 100, 2);
 
     }
 
+    // shows weight change from when first started
     public double weightAnalysis() {
 
         double weightChange = user.getWeightlog().get(user.getWeightlog().size() - 1) - user.getWeightlog().get(0);

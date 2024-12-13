@@ -3,12 +3,12 @@ package com.mmu.UserInfo;
 import java.util.HashMap;
 
 public class User extends BaseUser {
-    private double height;
+    private double height; // users height
     private double weight; // current weight
-    private int age;
-    private String gender;
+    private int age; // users age
+    private String gender; // users gender
     private HashMap<Integer, Double> weightlog; // for the new weight added
-    private int counter;
+    private int counter; // use as a counter to store the weight
 
     public User(String name, String username, String password, double height, double weight, int age, String gender) {
         super(name, username, password);
@@ -76,6 +76,14 @@ public class User extends BaseUser {
     public String toString() {
         return "User [name=" + name + ", height=" + height + ", weight=" + weight + ", age=" + age + ", gender ="
                 + gender + "]";
+    }
+
+    public int getCounter() {
+        return counter;
+    }
+
+    public void setCounter(int counter) {
+        this.counter = counter;
     }
 
 }

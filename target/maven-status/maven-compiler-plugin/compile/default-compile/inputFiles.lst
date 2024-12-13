@@ -1,5 +1,6 @@
-/mnt/c/work/myfitbuddy/src/main/java/com/mmu/BaseUser.java
 /mnt/c/work/myfitbuddy/src/main/java/com/mmu/LoggedInMenu.java
+/mnt/c/work/myfitbuddy/src/main/java/com/mmu/Logic.java
 /mnt/c/work/myfitbuddy/src/main/java/com/mmu/Main.java
-/mnt/c/work/myfitbuddy/src/main/java/com/mmu/User.java
-/mnt/c/work/myfitbuddy/src/main/java/com/mmu/UsersDataStorage.java
+/mnt/c/work/myfitbuddy/src/main/java/com/mmu/UserInfo/BaseUser.java
+/mnt/c/work/myfitbuddy/src/main/java/com/mmu/UserInfo/User.java
+/mnt/c/work/myfitbuddy/src/main/java/com/mmu/UserInfo/UsersDataStorage.java

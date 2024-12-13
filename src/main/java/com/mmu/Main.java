@@ -49,6 +49,7 @@ public class Main {
                             switch (adminOption) {
                                 case 1 -> {
                                     userSystem.showAllUsers(); // Shows all users that have made an account
+                                    
                                 }
 
                                 case 2 -> {

@@ -16,6 +16,7 @@ public class Logic {
 
     }
 
+    // prints banner for log in screen
     public void getBanner() {
         System.out.println(
                 "                  ___       _                                 ___               _      _        \r\n" + //
@@ -34,6 +35,7 @@ public class Logic {
                         "       `\\___/'                                                                           `\\___/'");
     }
 
+    // makes sure user actually exist to delete
     public void choosingWhatUserToDelete() {
 
         System.out.println("Enter username of user you wish to delete: ");
@@ -53,6 +55,7 @@ public class Logic {
         userSystem.saveUser(binFile);
     }
 
+    // makes sure user actually exist to edit
     public void editingUsersInfo() {
         System.out.println("Enter username of user you wish to edit: ");
         String userToEdit = scan.nextLine();
@@ -95,6 +98,7 @@ public class Logic {
         }
     }
 
+    // useer checker
     public void checkingIfUserExist(String username, String password, User user) {
         while (user == null) {
             System.out.println("Your Username or password is incorrect");
@@ -106,6 +110,7 @@ public class Logic {
         }
     }
 
+    // logic behind bulkingorcutting
     public void bulkingOrCutting(User user) {
         LoggedInMenu obj = new LoggedInMenu(user);
         System.out.println("Are you Bulking or Cutting?");
@@ -140,6 +145,7 @@ public class Logic {
             System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
         }
 
+        // users sign up page
     }
 
     public void usersSignUp() {
@@ -163,6 +169,7 @@ public class Logic {
         userSystem.saveUser(binFile); // saves informatiob is the file "binFile"
     }
 
+    // users weigh analyse page
     public void weightTrackerMenu(User user, String username) {
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
         System.out.println("[1] would you like to log your weight ");
